@@ -1,140 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sagarika Private Institute</title>
+  <meta charset="UTF-8">
+  <title>Admission Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 30px;
     }
-    header {
-      background: #4CAF50;
-      color: white;
+    .form-container {
+      max-width: 600px;
+      margin: auto;
       padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .form-container h2 {
       text-align: center;
     }
-    nav {
-      background: #333;
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
+    label {
       display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
+      margin-top: 10px;
+      font-weight: bold;
     }
-    nav a:hover {
-      background: #ddd;
-      color: black;
-    }
-    section {
-      padding: 20px;
-    }
-    .course {
-      background: #f4f4f4;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-    form input, form textarea {
+    input, select, textarea {
       width: 100%;
-      padding: 10px;
-      margin: 6px 0;
-      box-sizing: border-box;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Sagarika Private Institute</h1>
-    <p>CBSE Board Class III-VIII English Medium Coaching Classes</p>
-  </header>
+<div class="form-container">
+  <h2>Admission Form</h2>
+  <form action="submit_form.php" method="POST">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#courses">Class</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Sagarika Private Institute is an online/Offline platform that provides high-quality educational content for students and learners of 10-17 ages.
-    <a href="https://example.com" class="button-link">New Admission 2025</a>
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required>
+      <option value="">--Select--</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
 
-<style>
-  .button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-  }
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
 
-  .button-link:hover {
-    background-color: #0056b3;
-  }
-</style>
-</p>
-  </section>
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
 
-  <section id="class">
-    <h2>Our Class</h2>
-    <div class="class">
-      <h3>English (Class-III)</h3>
-      <p<button onclick="window.location.href='https://example.com';">
-  New Admission
-</button>
-.</p>
-    </div>
-    <div class="course">
-      <h3>Math (Class-III)</h3>
-      <p<button onclick="window.location.href='https://example.com';">
-  Offline Admission Form
-</button>
-    </p>
-    </div>
-    <div class="course">
-      <h3>Science (Class-III)</h3>
-      <p<button onclick="window.location.href='https://example.com';">
-  Online Course
-</button>
-    </p>
-    </div>
-  </section>
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <label for="course">Course Applying For</label>
+    <select id="course" name="course" required>
+      <option value="">--Select--</option>
+      <option value="bsc">B.Sc</option>
+      <option value="ba">B.A</option>
+      <option value="bcom">B.Com</option>
+      <option value="btech">B.Tech</option>
+      <option value="mba">MBA</option>
+    </select>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <input type="submit" value="Send Message">
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Sagarika Private Institute. All rights reserved.</p>
-  </footer>
+    <button type="submit">Submit</button>
+  </form>
+</div>
 
 </body>
 </html>
